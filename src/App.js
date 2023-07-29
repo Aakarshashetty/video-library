@@ -7,6 +7,7 @@ import VideoListing from "./pages/VideoListing/VideoListing";
 import SingleVideo from "./pages/SingleVideo/SingleVideo";
 import WatchLater from "./pages/WatchLater/WatchLater";
 import SideBar from "./Components/SideBar";
+import SinglePlayList from "./pages/Playlists/SinglePlayList";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/watchLater" element={<WatchLater/>}/>
         <Route path="/:category" element={<VideoListing/>}/>
         <Route path="/:category/:title" element={<SingleVideo/>}/>
+        <Route path="/playlist/:playlistName" element={<SinglePlayList/>}/>
       </Routes>
     </div>
   );

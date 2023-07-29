@@ -1,24 +1,24 @@
-import React from 'react'
-import { useVideos } from '../../context/videos-context'
-import { useNavigate } from 'react-router';
+import React from "react";
+import { useVideos } from "../../context/videos-context";
+import { useNavigate } from "react-router";
+import "./Home.css";
 
 const Home = () => {
-  const {videosData} = useVideos();
+  const { videosData } = useVideos();
   const navigate = useNavigate();
   return (
-    
-    <div>
+    <div className="home">
       <h2>Categories</h2>
-      <div>
-        {
-          videosData.categories.map(({_id,thumbnail,category}) => <div key={_id} onClick={()=>navigate(`/${category}`)}>
-            <img src={thumbnail} alt={category} width={200} height={200}/>
+      <div className="categories">
+        {videosData.categories.map(({ _id, thumbnail, category }) => (
+          <div key={_id} onClick={() => navigate(`/${category}`)}>
+            <img src={thumbnail} alt={category} width={250} height={150} />
             <h3>{category}</h3>
-          </div>)
-        }
+          </div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

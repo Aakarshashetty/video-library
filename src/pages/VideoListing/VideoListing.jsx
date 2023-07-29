@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { useVideos } from "../../context/videos-context";
 
 import VideoCard from "./VideoCard";
+import "./Videos.css";
 
 const VideoListing = () => {
   const { category } = useParams();
@@ -12,9 +13,9 @@ const VideoListing = () => {
     (video) => video.category === category
   );
   return (
-    <div>
+    <div className="category-videos">
       <h2>{category}</h2>
-      <div>
+      <div className="category-videos-wrapper">
         {categoryData.map((video) => (
           <VideoCard key={video._id} video={video} />
         ))}

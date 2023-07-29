@@ -1,0 +1,9 @@
+.videos{
+    margin: auto;
+   width: 1000px;
+    text-align: left;
+}
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}

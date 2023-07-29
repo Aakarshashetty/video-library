@@ -1,0 +1,12 @@
+.home{
+    margin: auto;
+    text-align: left;
+}
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+}
+.categories div{
+    margin: 10px;
+    cursor: pointer;
+}

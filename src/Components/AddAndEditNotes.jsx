@@ -3,6 +3,7 @@ import { v4 as uuid } from "uuid";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import { useVideos } from "../context/videos-context";
+import {MdEditNote} from "react-icons/md"
 
 const AddAndEditNotes = () => {
   const [userNotes, setUserNotes] = useState({ id: uuid(), note: "" });
@@ -10,7 +11,7 @@ const AddAndEditNotes = () => {
   const { dispatcher } = useVideos();
   return (
     <Popup
-      trigger={<button className="button"> Add notes </button>}
+      trigger={<button className="button"> <MdEditNote/> </button>}
       modal
       nested
     >

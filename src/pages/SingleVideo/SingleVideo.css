@@ -1,0 +1,28 @@
+.video{
+    margin: auto;
+    display: flex;
+    text-align: left;
+}
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0px;
+    border-bottom: 1px solid gray;
+    padding: 1rem 0rem;
+}
+.details{
+    display: flex;
+    align-items: center;
+}
+ .details img{
+    margin: 0px 10px;
+    border-radius: 5rem;
+}
+ .details h3{
+    margin: 0;
+}

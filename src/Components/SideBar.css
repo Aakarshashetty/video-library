@@ -1,0 +1,15 @@
+.sidebar{
+    margin: 10px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 200px;
+    
+}
+.sidebar a{
+    text-decoration: none;
+    color: #020617;
+    margin: 10px;
+    font-size: 18px;  
+}

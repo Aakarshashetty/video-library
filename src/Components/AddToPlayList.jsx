@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import { useVideos } from "../context/videos-context";
+import {MdPlaylistAdd} from "react-icons/md";
 
 const AddToPlayList = ({ video }) => {
   const {
@@ -19,7 +20,7 @@ const AddToPlayList = ({ video }) => {
   
   return (
     <Popup
-      trigger={<button className="button"> Add to Playlist </button>}
+      trigger={<button className="button"> <MdPlaylistAdd/> </button>}
       modal
       nested
     >

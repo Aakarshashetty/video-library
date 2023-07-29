@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import { useVideos } from "../../context/videos-context";
+import {BiTimeFive,BiSolidTimeFive} from "react-icons/bi";
 
 const VideoCard = ({ video }) => {
   const { _id, thumbnail, title, category, views, creator } = video;
@@ -10,15 +11,16 @@ const VideoCard = ({ video }) => {
   } = useVideos();
   const navigate = useNavigate();
   return (
-    <div key={_id}>
+    <div key={_id} className="video-card">
       <img
         src={thumbnail}
         alt={title}
         width={200}
         height={200}
         onClick={() => navigate(`/${category}/${title}`)}
+        className="thumbnail"
       />
-      <div>
+      <div className="details">
         <img
           src="https://fastly.picsum.photos/id/552/40/40.jpg?hmac=Mw1UniWwb5hOw0TBkzRYltrnO3XlOpqOiRw5LT17fXo"
           alt="pc"
@@ -26,11 +28,11 @@ const VideoCard = ({ video }) => {
         <div>
           <h4>{title}</h4>
           <h4>{category}</h4>
-          <p>
+          <small>
             {views} | {creator}
-          </p>
+          </small>
         </div>
-        <div>
+        <div className="watchlater">
           <button
             onClick={() =>
               watchLater.find(
@@ -53,8 +55,8 @@ const VideoCard = ({ video }) => {
                 video.title.split(" ").join("").toLowerCase() ===
                 title.split(" ").join("").toLowerCase()
             )
-              ? "Remove"
-              : "Add"}
+              ? <BiSolidTimeFive/>
+              : <BiTimeFive/>}
           </button>
         </div>
       </div>

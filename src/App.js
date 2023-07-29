@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>Video Library</h1>
+      <div className="content">
       <SideBar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/:category/:title" element={<SingleVideo/>}/>
         <Route path="/playlist/:playlistName" element={<SinglePlayList/>}/>
       </Routes>
+      </div>
     </div>
   );
 }

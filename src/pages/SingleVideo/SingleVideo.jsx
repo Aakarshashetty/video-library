@@ -4,7 +4,7 @@ import { useVideos } from "../../context/videos-context";
 
 const SingleVideo = () => {
   const { title } = useParams();
-  const { videosData } = useVideos();
+  const { videosData,dispatcher } = useVideos();
   const video = videosData.videos.find(
     (video) =>
       video.title.split(" ").join("").toLowerCase() ===
@@ -24,7 +24,7 @@ const SingleVideo = () => {
       <div>
         <h3>{video.title}</h3>
         <div>
-          <button>Watch Later</button>
+          <button onClick={()=>dispatcher({type:"ADD_TO_WATCH_LATER",payload:video})}>Watch Later</button>
           <button>Add to playlist</button>
           <button>Add notes</button>
         </div>

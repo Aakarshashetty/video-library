@@ -9,7 +9,9 @@ export const VideoContextProvider = ({children})=>{
         categories:categories,
         videos:videos,
         watchLater:[],
-        playlists:[]
+        playlists:{
+            music:[]
+        }
     })
     
     return(

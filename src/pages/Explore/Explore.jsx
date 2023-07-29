@@ -7,7 +7,7 @@ const Explore = () => {
   const { videosData } = useVideos();
   return (
     <div className="videos">
-      <input placeholder="Search video by title" />
+      <input placeholder="Search video by title" className="search"/>
       <div className="wrapper">
         {videosData.videos.map((video) => (
           <VideoCard key={video._id} video={video} className="video-card"/>

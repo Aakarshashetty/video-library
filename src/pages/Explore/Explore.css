@@ -7,3 +7,15 @@
     display: flex;
     flex-wrap: wrap;
 }
+.search{
+    margin: 20px;
+    width: 90%;
+    height: 7vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: transparent;
+    border-radius: 5rem;
+    padding: 0rem 0.5rem;
+}
+.search:focus{
+    outline:none
+}
